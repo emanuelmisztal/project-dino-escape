@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Author: Emanuel Misztal
+ * 2019
+ */
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,35 +17,29 @@ public class FingerprintScanner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cracked = false;
+        cracked = false; // at start scaner is not cracked
     }
 
-    public void ChangeScanStatus() { cracked = true; }
+    public void ChangeScanStatus() { cracked = true; } // cracket interface
 
+    // indicate that player's input is invalid
     private IEnumerator Deny()
     {
-        Debug.Log("Deny coroutine started");
-        gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Interacive/scanner-red");
-        Debug.Log("Changed FPID sprite to red");
-        Debug.Log("Start waiting");
-        yield return new WaitForSeconds(1.5f);
-        Debug.Log("Waited for 3 seconds");
-        gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Interacive/scanner");
-        Debug.Log("Changed FPID sprite to normal");
+        gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Interacive/scanner-red"); // highlight scanner red
+        yield return new WaitForSeconds(1.5f); // wait for some short time
+        gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Interacive/scanner"); // return scanner color to normal
     }
 
     private void OnMouseDown()
     {
-        if (cracked)
+        if (cracked) // if scanner was cracked
         {
-            Debug.Log("FPID is cracked, unlock");
-            gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Interacive/scanner-green");
-            door.ChangeProgressStatus(2);
+            gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Interacive/scanner-green"); // unlocked
+            door.ChangeProgressStatus(2); // move in questline
         }
-        else
+        else // if scanner wasn't cracked
         {
-            Debug.Log("FPID is not cracked, start Deny coroutine");
-            StartCoroutine("Deny");
+            StartCoroutine("Deny"); // start deny coroutine
         }
     }
 }

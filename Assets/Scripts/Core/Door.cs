@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Author: Emanuel Misztal
+ * 2019
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,9 +19,10 @@ public class Door : MonoBehaviour
         foreach (GameObject go in locks) go.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/locked"); // change all locks sprites to locked
     }
 
+    // when quest is completed
     public void ChangeProgressStatus(short id)
     {
-        locks[id].gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/unlocked");
-        progress[id] = true;
+        locks[id].gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/unlocked"); // load unlocked lock sprite
+        progress[id] = true; // check in progress array
     }
 }

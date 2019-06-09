@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ * Author: Kaja Więckowska, Emanuel Misztal
+ * 2019
+ */
+
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Desktop : MonoBehaviour
@@ -7,7 +12,7 @@ public class Desktop : MonoBehaviour
     public Text textField; // link to text field
     public GameObject inputField; // link to input field
     public FingerprintScanner fps; // link to fingerprint scanner
-    public GameObject TextMessagePassword;
+    public GameObject TextMessagePassword; // link to text message indicating change of fingerprint
 
     private void OnMouseDown()
     {
@@ -17,13 +22,12 @@ public class Desktop : MonoBehaviour
     // event called by ending input in input field
     public void CheckPassword()
     {
-        if (textField.text == "haslo")
+        if (textField.text == "haslo") // ! wrong way to check if password is correct, password should be private field so it can be changed
         {
-            Debug.Log("odcisk palca zmieniony");
             TextMessagePassword.SetActive(true); // wyświetla napis że odcisk palca został zmieniony
-            fps.ChangeScanStatus();
+            fps.ChangeScanStatus(); // change fingerprint status to cracked
         }
-        else textField.text = "";
-        inputField.gameObject.SetActive(false);
+        else textField.text = ""; // empty password field
+        inputField.gameObject.SetActive(false); // turn off password field
     }
 }

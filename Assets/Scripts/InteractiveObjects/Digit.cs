@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Author: Emanuel Misztal
+ * 2019
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,16 +14,17 @@ public class Digit : MonoBehaviour
     // when pressed send digit to display
     private void OnMouseDown()
     {
+        // check wich button was pressed
         switch (this.name)
         {
-            case "V":
-                panel.CheckPin();
+            case "V": // acceptation button
+                panel.CheckPin(); // check if pin is right
                 break;
-            case "X":
-                panel.Reset();
+            case "X": // clear button
+                panel.Reset(); // clear panel screen
                 break;
-            default:
-                panel.InputDigit(this.GetComponent<SpriteRenderer>().sprite);
+            default: // digits
+                panel.InputDigit(this.GetComponent<SpriteRenderer>().sprite); // put digit on panel screen
                 break;
         }
     }

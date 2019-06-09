@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿/*
+ * Author: Emanuel Misztal
+ * 2019
+ *                         _
+ *          ,---.          U
+ *         ;     \         ;
+ *     .==\"/==.  `-.___.-'
+ *    ((+) .  .:)
+ *    |`.-(o)-.'|
+ *    \/  \_/  \/
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +18,9 @@ public class Pipe : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        if (GetComponent<SpriteRenderer>().sprite.name == "pipe-knee")
+        if (GetComponent<SpriteRenderer>().sprite.name == "pipe-knee") // if it's pipe knee
         {
+            // check in wich position it is (z rotation)
             switch (transform.eulerAngles.z)
             {
                 case 0f:
@@ -27,8 +40,9 @@ public class Pipe : MonoBehaviour
                     break;
             }
         }
-        else
+        else // it's straight pipe
         {
+            // check in wich position it is (z rotation)
             switch (transform.eulerAngles.z)
             {
                 case 0f:

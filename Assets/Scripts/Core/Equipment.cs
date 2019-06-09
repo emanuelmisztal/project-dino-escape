@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Author: Emanuel Misztal
+ * 2019
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -60,6 +65,7 @@ public class Equipment : MonoBehaviour
     {
         transform.position = new Vector3(gameObject.transform.position.x + offset, transform.position.y, transform.position.z); // change position of equipment background
         radio.transform.position = new Vector3(radio.transform.position.x + offset, radio.transform.position.y, radio.transform.position.z); // change position of radio
+        
         // now change position of other items
         foreach (CollectableObject item in items)
         {
