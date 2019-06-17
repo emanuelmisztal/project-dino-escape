@@ -6,11 +6,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
     public GameObject[] locks; // link to looks on door
+    public bool IsGameWon = false;
+    public GameMaster gameMaster;
 
     public bool[] progress; // checklist for completed quests - opened locks
 
@@ -39,11 +40,15 @@ public class Door : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
             GameObject.FindGameObjectWithTag("panelscienny").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Backgrounds/s1-kod-otwarte-drzwi");
+            IsGameWon = true;
         }
     }
 
     private void OnMouseDown()
     {
-        if (progress[0] && progress[1] && progress[2] && progress[3]) SceneManager.LoadScene("GameOver");
+        if(IsGameWon == true)
+        {
+            gameMaster.ShowGameWon();
+        }
     }
 }

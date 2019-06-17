@@ -42,6 +42,8 @@ public class Valve : MonoBehaviour
         // if pipes are correct
         if (i >= 23)
         {
+            gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/PipesMinigame/zawór2");
+            //gameObject.transform.position = new Vector3(-1.349f, -3.62f, 0.3164063f);
             TextMessagePipe.SetActive(true); // show copletion text
             //background.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Backgrounds/ściana3 - naprawione rury"); // load new background
             GameObject.FindGameObjectWithTag("pipeenter").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Backgrounds/s3-zbliżenie-kable-naprawione");
@@ -63,6 +65,8 @@ public class Valve : MonoBehaviour
         // if pipes are correct
         if (i >= 23)
         {
+            gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/PipesMinigame/zawór2");
+            //gameObject.transform.position = new Vector3(-1.349f, -3.62f, 0.3164063f);
             TextMessagePipe.SetActive(true); // show copletion text
             //background.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Backgrounds/ściana3 - naprawione rury"); // load new background
             GameObject.FindGameObjectWithTag("pipeenter").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Backgrounds/s3-zbliżenie-kable-naprawione");

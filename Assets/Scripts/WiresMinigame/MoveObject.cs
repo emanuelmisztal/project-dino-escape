@@ -20,7 +20,7 @@ public class MoveObject : MonoBehaviour
 
     private void Start()
     {
-        gameObject.transform.position = new Vector3(0, hookPosition.transform.position.y - DistanceY, 0);
+        gameObject.transform.position = new Vector3(0, hookPosition.transform.position.y - 3f, 0);
         IdNumber = GetComponentInParent<ChangingActivityStatus>().IdNumber;
 
         if(IdNumber == 17 || IdNumber == 19 || IdNumber == 2)
@@ -45,8 +45,6 @@ public class MoveObject : MonoBehaviour
     {
         if (!IsMovingEnabled || WiresWinGuard.WiresMinigameIsWon == true)
         {
-            Debug.Log(WiresWinGuard.WiresMinigameIsWon);
-
             return;
         }
 

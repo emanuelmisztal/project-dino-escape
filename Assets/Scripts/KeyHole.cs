@@ -8,7 +8,7 @@ public class KeyHole : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (GameObject.FindObjectOfType<Equipment>().items[5].GetIsSelected() && GameObject.FindObjectOfType<WiresMinigameWinGuard>().WiresMinigameIsWon)
+        if (GameObject.FindObjectOfType<Equipment>().items[5] != null && GameObject.FindObjectOfType<Equipment>().items[5].GetIsSelected() && GameObject.FindObjectOfType<WiresMinigameWinGuard>().WiresMinigameIsWon)
         {
             GameObject.FindObjectOfType<Door>().ChangeProgressStatus(3);
             eq.items[5].gameObject.SetActive(false);

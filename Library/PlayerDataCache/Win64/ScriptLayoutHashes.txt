@@ -5,6 +5,7 @@ SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Escape.unity
 Assets/Scenes/GameOver.unity
+Assets/Scenes/GameWon.unity
 SceneListEnd?
 db071bf781db20e43cdae9d93f61f6c3 Assembly-CSharp.dll:.CollectableObject
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -199,7 +200,7 @@ e436c259341d8c0f349723a5367a34b4 Assembly-CSharp.dll:.DinoSkeleton
 f1ac15b7953b5174a77b29c4130c7ec2 Assembly-CSharp.dll:.WiresMinigame
 2aa9a7a361df8a18472ba3942ed322e7 Assembly-CSharp.dll:.BackArrow_2
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
-4625260c62204d9ffaaff9b3478eb1f2 Assembly-CSharp.dll:.Door
+04401f38da345c2a5f46cb553f9e8a54 Assembly-CSharp.dll:.Door
 c062503a3f6875d28b4f64b0519802cc Assembly-CSharp.dll:.CloudsOrder
 f1ac15b7953b5174a77b29c4130c7ec2 Assembly-CSharp.dll:.PipesMinigameExit
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro

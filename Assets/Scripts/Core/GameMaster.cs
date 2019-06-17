@@ -29,4 +29,9 @@ public class GameMaster : MonoBehaviour
     {
         SceneManager.LoadScene("GameOver"); // load game over scene
     }
+    // when time is won
+    public void ShowGameWon()
+    {
+        SceneManager.LoadScene("GameWon"); // load game won scene
+    }
 }
