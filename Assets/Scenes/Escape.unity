@@ -3582,8 +3582,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 590, y: 312}
-  m_SizeDelta: {x: 1.7, y: 1.8}
+  m_AnchoredPosition: {x: 601.6, y: 324.3}
+  m_SizeDelta: {x: 1.2, y: 1.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386432093
 MonoBehaviour:
@@ -14535,6 +14535,7 @@ GameObject:
   - component: {fileID: 1013135658}
   - component: {fileID: 1013135662}
   - component: {fileID: 1013135661}
+  - component: {fileID: 1013135663}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -14664,6 +14665,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.380481, y: 11.664804}
   m_EdgeRadius: 0
+--- !u!70 &1013135663
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013135657}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 171, y: -0.7}
+  m_Size: {x: 16.8, y: 19.759998}
+  m_Direction: 0
 --- !u!1 &1015800971
 GameObject:
   m_ObjectHideFlags: 0
@@ -22147,10 +22164,10 @@ GameObject:
   - component: {fileID: 1402063177}
   - component: {fileID: 1402063178}
   - component: {fileID: 1402063176}
-  - component: {fileID: 1402063180}
+  - component: {fileID: 1402063179}
   m_Layer: 0
   m_Name: Scanner
-  m_TagString: Untagged
+  m_TagString: scanner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22176,7 +22193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402063175}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.3167, y: -0.071, z: -0.30078125}
+  m_LocalPosition: {x: 66.3167, y: -0.071, z: -0.692}
   m_LocalScale: {x: 0.2486736, y: 0.1754606, z: 0.18157984}
   m_Children: []
   m_Father: {fileID: 15926877}
@@ -22208,7 +22225,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.21, y: 3.52}
   m_EdgeRadius: 0
---- !u!114 &1402063180
+--- !u!114 &1402063179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22220,7 +22237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43ce9d87657f4e49858c8de29285761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipText: Czytnik odcisku palca
+  tipText: Skaner odcisku palca
 --- !u!1001 &1415029323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27572,7 +27589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069490032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62.42, y: 0.7, z: 0.203125}
+  m_LocalPosition: {x: 63.23, y: 0.98, z: 0.203125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1015800972}
@@ -28570,6 +28587,7 @@ GameObject:
   - component: {fileID: 2122915863}
   - component: {fileID: 2122915865}
   - component: {fileID: 2122915864}
+  - component: {fileID: 2122915866}
   m_Layer: 0
   m_Name: KeyHole
   m_TagString: keyhole
@@ -28585,7 +28603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122915862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.29, y: -0.907, z: 0}
+  m_LocalPosition: {x: 66.29, y: -0.907, z: -0.961}
   m_LocalScale: {x: 0.83936, y: 0.83936, z: 0.83936}
   m_Children: []
   m_Father: {fileID: 15926877}
@@ -28604,8 +28622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eq: {fileID: 558439897}
---- !u!58 &2122915865
-CircleCollider2D:
+--- !u!61 &2122915865
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -28618,8 +28636,31 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &2122915866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122915862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43ce9d87657f4e49858c8de29285761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipText: Dziurka na klucz
 --- !u!1 &2124678651
 GameObject:
   m_ObjectHideFlags: 0

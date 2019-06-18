@@ -22,7 +22,7 @@ public class Desktop : MonoBehaviour
     // event called by ending input in input field
     public void CheckPassword()
     {
-        if (textField.text == "haslo") // ! wrong way to check if password is correct, password should be private field so it can be changed
+        if (textField.text == "klopsik" || textField.text == "Klopsik") // ! wrong way to check if password is correct, password should be private field so it can be changed
         {
             TextMessagePassword.SetActive(true); // wyświetla napis że odcisk palca został zmieniony
             fps.ChangeScanStatus(); // change fingerprint status to cracked

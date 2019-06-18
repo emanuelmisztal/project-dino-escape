@@ -11,6 +11,7 @@ TagManager:
   - pipeenter
   - tlostart
   - keyhole
+  - scanner
   layers:
   - Default
   - TransparentFX

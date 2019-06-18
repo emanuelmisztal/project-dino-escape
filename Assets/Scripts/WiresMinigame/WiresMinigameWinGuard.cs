@@ -33,16 +33,19 @@ public class WiresMinigameWinGuard : MonoBehaviour
     public void WonWiresMinigame()
     {
         WiresMinigameIsWon = true;
-        LightningEffects.SetActive(false);
-        TextMessageWires.SetActive(true);
-        GameObject.FindObjectOfType<Door>().ActivatePanel();
-        GameObject.FindGameObjectWithTag("panelscienny").gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Backgrounds/s1-kod-działa");
+        GameObject.FindWithTag("scanner").GetComponent<FingerprintScanner>().Activate();
+        GameObject.FindWithTag("keyhole").GetComponent<KeyHole>().Activate();
+        GameObject.FindWithTag("panelscienny").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Backgrounds/s1-kod-działa");
+        door.ActivatePanel();
+        door.ChangeProgressStatus(1);
 
         for (int i = 0; i < ColliderPinPanel.Length; i++)
         {
             ColliderPinPanel[i].GetComponent<BoxCollider2D>().enabled = true;
         }
 
-        door.ChangeProgressStatus(1);
+        
+        LightningEffects.SetActive(false);
+        TextMessageWires.SetActive(true);
     }
 }
