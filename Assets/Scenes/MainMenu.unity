@@ -875,7 +875,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: HOW TO PLAY
+  m_text: JAK GRAC
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -903,8 +903,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 5.8
-  m_fontSizeBase: 5.8
+  m_fontSize: 7.5
+  m_fontSizeBase: 7.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -944,12 +944,12 @@ MonoBehaviour:
   m_margin: {x: 7.9935675, y: 1.7942803, z: 7.9864087, w: 1.8870206}
   m_textInfo:
     textComponent: {fileID: 1198619854}
-    characterCount: 11
+    characterCount: 8
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -1450,12 +1450,12 @@ PrefabInstance:
     - target: {fileID: 2619017347276443557, guid: 55b8e834675338e488ed5223ed636788,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2232027
+      value: 4.052
       objectReference: {fileID: 0}
     - target: {fileID: 2619017347276443557, guid: 55b8e834675338e488ed5223ed636788,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1092525
+      value: 2.61
       objectReference: {fileID: 0}
     - target: {fileID: 2619017347276443557, guid: 55b8e834675338e488ed5223ed636788,
         type: 3}
@@ -1505,16 +1505,37 @@ PrefabInstance:
     - target: {fileID: 2619017347276443557, guid: 55b8e834675338e488ed5223ed636788,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.371
+      value: 0.9696425
       objectReference: {fileID: 0}
     - target: {fileID: 2619017347276443557, guid: 55b8e834675338e488ed5223ed636788,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.306
+      value: 0.9236711
       objectReference: {fileID: 0}
     - target: {fileID: 2619017347276443557, guid: 55b8e834675338e488ed5223ed636788,
         type: 3}
       propertyPath: m_LocalScale.z
+      value: 0.70725197
+      objectReference: {fileID: 0}
+    - target: {fileID: 5065677681439069348, guid: 55b8e834675338e488ed5223ed636788,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c9ef2f535139dcb4f8914960f302182e,
+        type: 3}
+    - target: {fileID: 5065677681439069348, guid: 55b8e834675338e488ed5223ed636788,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5065677681439069348, guid: 55b8e834675338e488ed5223ed636788,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5065677681439069348, guid: 55b8e834675338e488ed5223ed636788,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -1579,7 +1600,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: EXIT
+  m_text: WYJSCIE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1607,8 +1628,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 8.89
+  m_fontSizeBase: 8.89
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1648,7 +1669,7 @@ MonoBehaviour:
   m_margin: {x: 8.008097, y: 2.0211165, z: 7.9864087, w: 1.9904934}
   m_textInfo:
     textComponent: {fileID: 1943278161}
-    characterCount: 4
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
     wordCount: 1

@@ -20,7 +20,7 @@ public class MoveObject : MonoBehaviour
 
     private void Start()
     {
-        gameObject.transform.position = new Vector3(0, hookPosition.transform.position.y - 3f, 0);
+        gameObject.transform.position = new Vector3(hookPosition.transform.position.x - DistanceY, hookPosition.transform.position.y - DistanceY, 0);
         IdNumber = GetComponentInParent<ChangingActivityStatus>().IdNumber;
 
         if(IdNumber == 17 || IdNumber == 19 || IdNumber == 2)
